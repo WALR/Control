@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <meta charset="utf-8">
-        <title>Control Domotico y Vehiculo</title>
-        <meta name="generator" content="Bootply" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <!--[if lt IE 9]>
-            <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-        <link href="css/styles.css" rel="stylesheet">
-    </head>
-    <body>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Control Domotico y Vehiculo</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="css/styles.css" rel="stylesheet">
+	</head>
+	<body>
 
 <div class="navbar navbar-fixed-top navbar-inverse">
     <div class="container">
@@ -127,63 +127,12 @@
     </div>
 <hr>
 </div>
-    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script>
-        var socket = io();
-        $('#der').on('click',function(){
-        console.log("Encender Led")
-        socket.emit('led',0);
-        });
-        $('#izq').on('click',function(){
-        console.log("Apagar Led")
-        socket.emit('led',1);
-        });
-        $('#ade').on('click',function(){
-        console.log("Apagar Led")
-        socket.emit('led',2);
-        });
-        $('#par').on('click',function(){
-        console.log("Apagar Led")
-        socket.emit('led',3);
-        });
-        function info (elEvento) {
-        evento = elEvento || window.event;
-        k=evento.keyCode; //número de código de la tecla.
-        //alert(k)
-        //encender(k);
-        if(k==38){
-        adelante();
-        }
-        else if(k==40){
-        parar();
-        }
-        else if(k==39){
-        derecha();
-        }
-        else if(k==37){
-        izquierda();
-        }
-        }
-        window.onload = function() {
-        document.onkeydown = info;
-        }
-        function adelante(){
-        console.log("Adelante: "+k);
-        socket.emit('led',2);
-        };
-        function parar(){
-        console.log("atras: "+k);
-        socket.emit('led',3);
-        };
-        function derecha(){
-        console.log("derecha: "+k);
-        socket.emit('led',0);
-        };
-        function izquierda(){
-        console.log("izquierda: "+k);
-        socket.emit('led',1);
-        };
-    </script>
-</body>
+<!-- /CONTENT ============-->
+
+	<!-- script references -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+	</body>
 </html>

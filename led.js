@@ -1,12 +1,18 @@
 var app = require('express')();
 var http = require('http').Server(app);
+var sa = require('fs');
+var ruta = require('path');
 var io = require('socket.io')(http);
 var five = require("johnny-five"),
     board = new five.Board(),
     myLed;
 
+
+
+
 app.get('/', function(req, res){
-  res.sendfile('index.html');
+  var rutaArchivo = "." +((req.url =='/')?'/index.html':red.url)
+  res.sendfile('./public/index.html');
 });
 board.on("ready", function() {
 
