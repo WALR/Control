@@ -13,7 +13,6 @@
         <link href="css/styles.css" rel="stylesheet">
     </head>
     <body>
-
 <div class="navbar navbar-fixed-top navbar-inverse">
     <div class="container">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -22,131 +21,174 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#">Control Domotico y Vehiculo</a>
-
-    </div><!-- /.container -->
-</div><!-- /.navbar -->
-
-<!-- HEADER
-=================================-->
-
+    </div>
+</div>
 <div class="jumbotron text-center">
     <div class="container">
       <div class="row">
         <div class="col col-lg-12 col-sm-12">
           <h1>Control</h1>
-          <p>Domitico y Vehiculo</p>
-
+          <p>Domotico y Vehiculo</p>
         </div>
       </div>
     </div>
 </div>
-<!-- /header container-->
-
-<!-- CONTENT
-=================================-->
 <div class="container">
     <div class="row">
         <div class="col-md-4"><div class="well">
             <div class="col-md-offset-3">
-            <img id="img_garage" src="img/led-off-th.png" width="120" height="120" alt="Off" class="img-circle"  onclick="$('#off').attr('src','fontSred-led-on.svg');" >
+            <img id="img_garage" src="img/led-off.svg" width="120" height="120" alt="Off" class="img-circle">
             <p><h3>Luz de Garage</h3></p>
             </div>
             <div class="col-md-offset-2">
-            <button id="garage_on" type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok"></span> Encender</button>
-            <button id="garage_off" type="button" class="btn btn-danger"><span class="glyphicon glyphicon-off"></span> Apagar</button>
+            <button id="garage_on" type="button" class="btn btn-success" onclick="javascript:cambiarImagen('img_garage','img/red-led-on-th.png');"><span class="glyphicon glyphicon-ok"></span> Encender</button>
+            <button id="garage_off" type="button" class="btn btn-danger" onclick="javascript:cambiarImagen('img_garage','/img/led-off.svg');"><span class="glyphicon glyphicon-off"></span> Apagar</button>
             </div>
         </div></div>
         <div class="col-md-4"><div class="well">
             <div class="col-md-offset-3">
-            <img id="img_garage" src="img/led-off-th.png" width="120" height="120" alt="Off" class="img-circle">
+            <img id="img_publica" src="img/led-off-th.png" width="120" height="120" alt="Off" class="img-circle">
             <p><h3>Luz de Publica</h3></p>
             </div>
             <div class="col-md-offset-2">
-            <button id="pub_on" type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok"></span> Encender</button>
-            <button id="pub_off" type="button" class="btn btn-danger"><span class="glyphicon glyphicon-off"></span> Apagar</button>
+            <button id="pub_on" type="button" class="btn btn-success" onclick="javascript:cambiarImagen('img_publica','img/red-led-on-th.png');"><span class="glyphicon glyphicon-ok"></span> Encender</button>
+            <button id="pub_off" type="button" class="btn btn-danger" onclick="javascript:cambiarImagen('img_publica','img/led-off-th.png');"><span class="glyphicon glyphicon-off"></span> Apagar</button>
             </div>
         </div></div>
         <div class="col-md-4"><div class="well">
             <div class="col-md-offset-3">
-            <img id="img_garage" src="img/led-off-th.png" width="120" height="120" alt="Off" class="img-circle">
+            <img id="img_sala" src="img/led-off-th.png" width="120" height="120" alt="Off" class="img-circle">
             <p><h3>Luz de Sala</h3></p>
             </div>
             <div class="col-md-offset-2">
-            <button id="sala_on" type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok"></span> Encender</button>
-            <button id="sala_off" type="button" class="btn btn-danger"><span class="glyphicon glyphicon-off"></span> Apagar</button>
+            <button id="sala_on" type="button" class="btn btn-success" onclick="javascript:cambiarImagen('img_sala','img/red-led-on-th.png');"><span class="glyphicon glyphicon-ok"></span> Encender</button>
+            <button id="sala_off" type="button" class="btn btn-danger" onclick="javascript:cambiarImagen('img_sala','img/led-off-th.png');"><span class="glyphicon glyphicon-off"></span> Apagar</button>
             </div>
         </div></div>
     <div class="row">
         <div class="col-md-4"><div class="well">
             <div class="col-md-offset-3">
-            <img id="img_garage" src="img/led-off-th.png" width="120" height="120" alt="Off" class="img-circle">
+            <img id="img_cocina" src="img/led-off-th.png" width="120" height="120" alt="Off" class="img-circle">
             <p><h3>Luz de Cocina</h3></p>
             </div>
             <div class="col-md-offset-2">
-            <button id="cocina_on" type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok"></span> Encender</button>
-            <button id="cocina_off" type="button" class="btn btn-danger"><span class="glyphicon glyphicon-off"></span> Apagar</button>
+            <button id="cocina_on" type="button" class="btn btn-success" onclick="javascript:cambiarImagen('img_cocina','img/red-led-on-th.png');"><span class="glyphicon glyphicon-ok"></span> Encender</button>
+            <button id="cocina_off" type="button" class="btn btn-danger" onclick="javascript:cambiarImagen('img_cocina','img/led-off-th.png');"><span class="glyphicon glyphicon-off"></span> Apagar</button>
             </div>
         </div></div>
         <div class="col-md-4"><div class="well">
             <div class="col-md-offset-3">
-            <img id="img_garage" src="img/led-off-th.png" width="120" height="120" alt="Off" class="img-circle">
+            <img id="img_dorm" src="img/led-off-th.png" width="120" height="120" alt="Off" class="img-circle">
             <p><h3>Luz de Dormitorio</h3></p>
             </div>
             <div class="col-md-offset-2">
-            <button id="dorm_on" type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok"></span> Encender</button>
-            <button id="dorm_off" type="button" class="btn btn-danger"><span class="glyphicon glyphicon-off"></span> Apagar</button>
+            <button id="dorm_on" type="button" class="btn btn-success" onclick="javascript:cambiarImagen('img_dorm','img/red-led-on-th.png');"><span class="glyphicon glyphicon-ok"></span> Encender</button>
+            <button id="dorm_off" type="button" class="btn btn-danger" onclick="javascript:cambiarImagen('img_dorm','img/led-off-th.png');"><span class="glyphicon glyphicon-off"></span> Apagar</button>
             </div>
         </div></div>
         <div class="col-md-4"><div class="well">
             <div class="col-md-offset-3">
-            <img id="img_garage" src="img/led-off-th.png" width="120" height="120" alt="Off" class="img-circle">
+            <img id="img_bano" src="img/led-off-th.png" width="120" height="120" alt="Off" class="img-circle">
             <p><h3>Luz de Baño</h3></p>
             </div>
             <div class="col-md-offset-2">
-            <button id="bano_on" type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok"></span> Encender</button>
-            <button id="bano_off" type="button" class="btn btn-danger"><span class="glyphicon glyphicon-off"></span> Apagar</button>
+            <button id="bano_on" type="button" class="btn btn-success" onclick="javascript:cambiarImagen('img_bano','img/red-led-on-th.png');"><span class="glyphicon glyphicon-ok"></span> Encender</button>
+            <button id="bano_off" type="button" class="btn btn-danger" onclick="javascript:cambiarImagen('img_bano','img/led-off-th.png');"><span class="glyphicon glyphicon-off"></span> Apagar</button>
             </div>
         </div></div>
 <hr>
     <div class="row">
         <div class="col-lg-12"><div class="well">
             <div class="col-lg-offset-5">
-            <img id="img_garage" src="img/led-off-th.png" width="120" height="120" alt="Off" class="img-circle">
+            <img id="img_vehiculo" src="img/led-off-th.png" width="120" height="120" alt="Off" class="img-circle">
             <p><h3>Control de Vehiculo</h3></p>
             </div>
             <div class="col-lg-12">&nbsp;</div>
             <div class="col-lg-offset-4 btn-group-lg">
-            <button id="pub_on" type="button" class="btn btn-success"><span class="glyphicon glyphicon-arrow-left"></span> Derecha</button>
+            <button id="izq" type="button" class="btn btn-warning"><span class="glyphicon glyphicon-arrow-left"></span> Izquierda</button>
             <div class="btn-group-vertical btn-group-lg">
-            <button id="pub_on" type="button" class="btn btn-success"><span class="glyphicon glyphicon-arrow-up"></span> Adelante</button>
-            <button id="pub_off" type="button" class="btn btn-danger"><span class="glyphicon glyphicon-minus"></span>  Parar</button>
+            <button id="ade" type="button" class="btn btn-success"><span class="glyphicon glyphicon-arrow-up"></span> Adelante</button>
+            <button id="parar" type="button" class="btn btn-danger"><span class="glyphicon glyphicon-minus"></span>  Parar</button>
             </div>
-            <button id="pub_on" type="button" class="btn btn-success">Derecha <span class="glyphicon glyphicon-arrow-right"></span></button>
+            <button id="der" type="button" class="btn btn-warning">Derecha <span class="glyphicon glyphicon-arrow-right"></span></button>
             </div>
         </div></div>
     </div>
 <hr>
 </div>
-    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/socket.io-1.2.0.js"></script>
     <script>
+        function cambiarImagen(d,fuente) {
+        $("#"+d).attr("src", fuente);
+        };
+
         var socket = io();
-        $('#der').on('click',function(){
-        console.log("Encender Led")
-        socket.emit('led',0);
+        $('#garage_on').on('click',function(){
+        console.log("Encender Garage")
+        socket.emit('led',4);
+        });
+        $('#garage_off').on('click',function(){
+        console.log("Apagar Garage")
+        socket.emit('led',5);
+        });
+        $('#pub_on').on('click',function(){
+        console.log("Encender Publica")
+        socket.emit('led',6);
+        });
+        $('#pub_off').on('click',function(){
+        console.log("Apagar Publica")
+        socket.emit('led',7);
+        });
+        $('#sala_on').on('click',function(){
+        console.log("Encender Sala")
+        socket.emit('led',8);
+        });
+        $('#sala_off').on('click',function(){
+        console.log("Apagar Sala")
+        socket.emit('led',9);
+        });
+        $('#cocina_on').on('click',function(){
+        console.log("Encender Cocina")
+        socket.emit('led',10);
+        });
+        $('#cocina_off').on('click',function(){
+        console.log("Apagar Cocina")
+        socket.emit('led',11);
+        });
+        $('#dorm_on').on('click',function(){
+        console.log("Encender Dormitorio")
+        socket.emit('led',12);
+        });
+        $('#dorm_off').on('click',function(){
+        console.log("Apagar Dormitorio")
+        socket.emit('led',13);
+        });
+        $('#bano_on').on('click',function(){
+        console.log("Encender Bano")
+        socket.emit('led',14);
+        });
+        $('#bano_off').on('click',function(){
+        console.log("Apagar Bano")
+        socket.emit('led',15);
         });
         $('#izq').on('click',function(){
-        console.log("Apagar Led")
+        console.log("Izquierda")
+        socket.emit('led',0);
+        });
+        $('#der').on('click',function(){
+        console.log("Derecha")
         socket.emit('led',1);
         });
         $('#ade').on('click',function(){
-        console.log("Apagar Led")
+        console.log("Adelante")
         socket.emit('led',2);
         });
-        $('#par').on('click',function(){
-        console.log("Apagar Led")
+        $('#parar').on('click',function(){
+        console.log("Parar")
         socket.emit('led',3);
         });
+
         function info (elEvento) {
         evento = elEvento || window.event;
         k=evento.keyCode; //número de código de la tecla.

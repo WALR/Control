@@ -1,0 +1,21 @@
+<?xml version="1.0"?><svg width="640" height="480" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+ <title>Red LED ON small</title>
+ <defs>
+  <linearGradient id="svg_6" x1="0" y1="0" x2="1" y2="0">
+   <stop stop-color="#bfbfbf" offset="0"/>
+   <stop stop-color="#404040" offset="1"/>
+  </linearGradient>
+  <linearGradient id="svg_1" x1="0" y1="0" x2="1" y2="1" spreadMethod="pad">
+   <stop stop-color="#ffffff" stop-opacity="0.996094" offset="0.101563"/>
+   <stop stop-color="#7f0000" offset="1"/>
+  </linearGradient>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <circle fill="url(#svg_6)" stroke-width="17.5" stroke-linecap="round" cx="155.5" cy="75" r="31.125" id="svg_3" fill-opacity="0.77" transform="rotate(90 155.50000000000003,75.00000000000001) "/>
+  <circle fill="url(#svg_6)" stroke-width="17.5" stroke-linecap="round" fill-opacity="0.64" cx="155.752837" cy="74.99904" r="26" id="svg_7"/>
+  <circle fill="#7f0000" stroke-width="17.5" stroke-linecap="round" cx="155.500545" cy="75.001696" r="23" id="svg_8"/>
+  <ellipse fill="url(#svg_1)" stroke-width="17.5" stroke-linecap="round" cx="143.31713" cy="66.44286" rx="7.742871" ry="4.012812" id="svg_20" transform="rotate(-45.252899169921875 143.3171234130859,66.44286346435545) "/>
+ </g>
+</svg>

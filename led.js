@@ -1,7 +1,7 @@
 var app = require('express')();
 var http = require('http').Server(app);
-var sa = require('fs');
-var ruta = require('path');
+// var sa = require('fs');
+// var path = require('path');
 var io = require('socket.io')(http);
 var five = require("johnny-five"),
     board = new five.Board(),
@@ -9,9 +9,9 @@ var five = require("johnny-five"),
 
 
 
-
+app.use(app.static(path.join(__dirname, 'public')));
 app.get('/', function(req, res){
-  var rutaArchivo = "." +((req.url =='/')?'/index.html':red.url)
+  // var rutaArchivo = "." +((req.url =='/')?'/index.html':red.url)
   res.sendfile('./public/index.html');
 });
 board.on("ready", function() {
@@ -61,6 +61,9 @@ io.on('connection', function(socket){
      motIzq.off();
      motDer.off();
      //myLed.fadeOut();
+    }
+    else if(btn==4){
+
     }
   });
 });
