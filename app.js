@@ -17,7 +17,7 @@ board.on("ready", function(){
 
   motDer = new five.Led({pin: 5});
   motIzq = new five.Led({pin: 4});
-  ledGarage = new five.Led({pin: 12});
+  ledGaraje = new five.Led({pin: 12});
   ledPublica = new five.Led({pin: 11});
   ledSala = new five.Led({pin: 10});
   ledCocina = new five.Led({pin: 9});
@@ -33,7 +33,7 @@ board.on("ready", function(){
   this.repl.inject({
       led: motDer,
       led: motIzq,
-      led: ledGarage,
+      led: ledGaraje,
       led: ledPublica,
       led: ledSala,
       led: ledCocina,
@@ -45,7 +45,7 @@ board.on("ready", function(){
 
 io.on('connection', function(socket){
   socket.on('led', function(btn){
-    console.log(btn)
+    console.log(btn);
     switch(btn){
         case 0:
             motDer.on();
@@ -68,11 +68,12 @@ io.on('connection', function(socket){
             break;
 
         case 4:
-            ledGarage.on();
+            ledGaraje.on();
+            console.log("Led Garaje Encendida");
             break;
 
         case 5:
-            ledGarage.off();
+            ledGaraje.off();
             break;
 
         case 6:
@@ -120,5 +121,9 @@ io.on('connection', function(socket){
   });
 });
 
-console.log('Escuchando en el puerto ' + port);
-app.listen(port);
+//console.log('Escuchando en el puerto ' + port);
+//app.listen(port);
+
+http.listen(3000, function(){
+  console.log("Escuchando puerto: 3000");
+});
